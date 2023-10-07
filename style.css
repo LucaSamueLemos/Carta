@@ -159,7 +159,7 @@ color: hsla(0,0%,20%,1);
 text-shadow: 0px 1px 1px hsla(0,0%,100%,1);
 font-size: 0.85em;
 line-height:1.35em;
-margin: 9px 25px 0 25px;
+margin: 5px 25px 0 25px;
 }
 
 #carta p::first-line{
