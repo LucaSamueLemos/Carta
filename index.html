@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Envelope de Enviar Cartas</title>
+
+	<link rel="stylesheet" href="style.css">
+   
+</head>
+<body>
+    <!-- Adicione a tag de áudio para reproduzir a música -->
+    <audio autoplay>
+        <source src="sua-musica.mp3" type="audio/mpeg">
+        Seu navegador não suporta áudio.
+    </audio>
+
+    <div id="perspectiva">
+        <div id="contenedor">
+            <div class="cara frontal">
+                <h1>Para a moça mais Formosa de Formosa!!<br><span>Desça a página ↓</span></h1>
+            </div>
+            <div class="cara trasera">
+                <div id="abrir"></div>
+                <div id="partes"></div>
+                <div id="carta">
+                    <hgroup>
+                        <h1>Brasilia, 02 de Outubro de 2023</h1>
+                    </hgroup>
+                    <p> Querida Andressa,<br> ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor Lorem ipsum dolor sit amet consectetur adipisicing elit. A dicta quidem, deleniti beatae adipisci ex odio veniam exercitationem expedita rem aut nobis minus praesentium tempora nostrum facilis soluta dolores?
+						 Aut! incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+						Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident reiciendis atque sequi itaque voluptas! Dolorem asperiores labore illum enim! Architecto maxime sit deserunt iste veritatis nulla aliquam illo quas quibusdam.</p>
+                </div>
+            </div>
+        </div><!-- fin contenedor -->
+    </div>
+    <div id="wrapper"></div>
+
+    <!-- Adicione a biblioteca jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        // Coloque o seu script jQuery aqui
+        $(window).scroll(function () {   
+       var scr = $(window).scrollTop(),
+       		C = $('#contenedor'),
+  	  		A = $('#abrir'),
+  	  		E = $('#carta'),
+					F = $('#carta hgroup h2'),
+  	  		P = $('#perspectiva');
+    
+    	// giro y abertura
+     	if (scr >= 100) {
+				C.css({
+					'transition':'all 1s',
+					'transform':'rotateY(180deg)'
+				});
+				A.css({
+					'transition':'all 1s .5s',
+					'transform':'rotateX(180deg)',
+					'z-index': '0'
+				});
+     	}
+     	// cerrado y giro
+     	else if (scr <= 100) {
+				C.css({
+					'transition':'all 1s .5s',
+					'transform':'rotateY(0deg)'
+				});
+				A.css({
+					'transition':'all 1s',
+					'transform':'rotateX(0deg)',
+					'z-index': '10'
+				});  
+     	}
+     	// Sobre trasladoY / carta
+     	if (scr >= 500) {
+				E.css({
+					'transition':'all .5s 1s',
+					'top':'-550px',
+					'height':'500px'
+				});
+     		P.css({
+     			'transition':'all 1s',
+     			'transform':'translateY(450px)'
+     		});
+				F.css({
+     			'transition':'all 1s',
+     			'transform':'rotateZ(180deg)'
+				});
+     	}
+     	// Sobre position original / guardado carta
+     	else if (scr <= 500) {
+				E.css({
+					'transition':'all .5s',
+					'top':'3px',
+					'height':'200px'
+				});
+     		P.css({
+     			'transform':'translateY(0px)'
+     		});
+				F.css({
+     			'transform':'rotateZ(0deg)'
+				});
+     	}
+    });
+    </script>
+</body>
+</html>
