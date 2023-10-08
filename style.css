@@ -155,7 +155,7 @@ text-shadow: 0px 1px 1px hsla(0,0%,100%,1);
 }
 
 #carta p{
-color: hsla(0,0%,20%,1);
+color: rgb(41, 40, 40);
 text-shadow: 0px 1px 1px hsla(0,0%,100%,1);
 font-size: 0.85em;
 line-height:1.35em;
@@ -165,8 +165,8 @@ margin: 5px 25px 0 25px;
 #carta p::first-line{
 color: hsla(0,63%,57%,1);
 text-shadow: 0px 2px 1px hsla(0,0%,100%,1);
-font-size: 1.5em;
+font-size: 1.2em;
 float: left;
-line-height:1.2em;
+line-height:1.5em;
 padding:10px 10px 0 0;
 }
